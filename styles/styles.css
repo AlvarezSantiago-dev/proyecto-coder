@@ -5,7 +5,6 @@
 }
 .card_index {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	position: relative;
 }
@@ -13,11 +12,13 @@
 	width: 290px;
 	color: white;
 	position: absolute;
+	left: 15px;
+	align-self: center;
 	
 }
 .card_index img {
 	object-fit: cover;
-	height: 615px;
+	height: 600px;
 	width: 95%;
 }
 .card_index_btn{
@@ -31,16 +32,24 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 15px;
 }
 .container-categorias img {
-	height: 615px;
+	object-fit: cover;
+	height: 600px;
 	width: 95%;
+}
+.btn_categorias {
+	border: 1px solid black;
+	color: white;
+	background-color: black;
+	width: 100px;
 }
 /* Estilos container 2 Parrafo + H3*/ 
 .container-index-2 {
 	margin: 0 auto;
 	width: 95%;
-	background-color: aqua;
+	margin-top: 20px;
 }
 .container-index-2 h3{
 	text-align: center;
@@ -49,4 +58,27 @@
 .container-index-2 p {
 	text-align: center;
 	align-self: center;
+}
+/* Estilos Index tittle 3*/
+.tittle-trabajos-index {
+	margin: 0 auto;
+	width: 95%;
+	height: 65px;
+	margin-top: 15px;
+}
+.tittle-trabajos-index h3{
+	text-align: center;
+	align-self: center;
+}
+/* Estilos Index galeria 2*/
+.contenedor-muestra {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 25px;
+}
+.contenedor-muestra img {
+	object-fit: cover;
+	height: 600px;
+	width: 95%;
 }
