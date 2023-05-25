@@ -1,27 +1,34 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
+
 .card_index {
 	display: flex;
 	justify-content: center;
 	position: relative;
 }
+
 .card_index_texto {
+	margin-top: 25px;
 	width: 290px;
 	color: white;
 	position: absolute;
-	left: 15px;
+	left: 25px;
 	align-self: center;
-	
+
 }
+
 .card_index img {
 	object-fit: cover;
-	height: 600px;
+	height: 397px;
 	width: 95%;
 }
-.card_index_btn{
+
+.card_index_btn {
+	height: 40px;
+	width: 150px;
 	color: white;
 	background-color: black;
 	border: 1px solid white;
@@ -34,31 +41,39 @@
 	align-items: center;
 	gap: 15px;
 }
+
 .container-categorias img {
 	object-fit: cover;
-	height: 600px;
+	height: 397px;
 	width: 95%;
 }
+
 .btn_categorias {
+	height: 40px;
+	width: 150px;
 	border: 1px solid black;
 	color: white;
 	background-color: black;
 	width: 100px;
 }
-/* Estilos container 2 Parrafo + H3*/ 
+
+/* Estilos container 2 Parrafo + H3*/
 .container-index-2 {
 	margin: 0 auto;
 	width: 95%;
 	margin-top: 20px;
 }
-.container-index-2 h3{
+
+.container-index-2 h3 {
 	text-align: center;
 	align-self: center;
 }
+
 .container-index-2 p {
 	text-align: center;
 	align-self: center;
 }
+
 /* Estilos Index tittle 3*/
 .tittle-trabajos-index {
 	margin: 0 auto;
@@ -66,19 +81,81 @@
 	height: 65px;
 	margin-top: 15px;
 }
-.tittle-trabajos-index h3{
+
+.tittle-trabajos-index h3 {
 	text-align: center;
 	align-self: center;
 }
+
 /* Estilos Index galeria 2*/
 .contenedor-muestra {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
 }
+
 .contenedor-muestra img {
 	object-fit: cover;
-	height: 600px;
+	height: 397px;
 	width: 95%;
+}
+
+/* Styles seccion contacto mobile first*/
+
+.form-container {
+	margin-top: 15px;
+	margin-left: 5%;
+	height: 96%;
+	max-height: 640px;
+}
+.container-contacto {
+	display: flex;
+	flex-direction: column-reverse;
+	
+	
+	
+}
+.container-contacto img{
+	margin-top: 15px;
+	align-self: center;
+	object-fit: cover;
+	height: 397px;
+	width: 95%;
+}
+.form-container form {
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	gap: 10px;
+	
+}
+.relleno-form {
+	width: 100%;
+	height: 48px;
+	padding: 16px 56px 16px 16px;
+	background-color: #f1f1f1;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	height: 45px;
+}
+textarea {
+padding: 16px 56px 16px 16px;
+outline: none;
+border: none;
+box-shadow: none;
+background-color: #f1f1f1;
+min-height: 96px;
+overflow: auto;
+resize: vertical;
+}
+.btn-form {
+	height: 40px;
+	background-color: #2e2e2e;
+	color: #ffff;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	width: 150px;
 }
