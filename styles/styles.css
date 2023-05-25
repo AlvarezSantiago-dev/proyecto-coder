@@ -29,13 +29,12 @@
 .card_index_btn {
 	height: 40px;
 	width: 150px;
-	color: white;
-	background-color: black;
 	background-color: #2e2e2e;
 	color: #ffff;
 	outline: none;
 	border: none;
 	box-shadow: none;
+	border-radius: 4px;
 }
 
 /* Estilos categorias */
@@ -55,13 +54,13 @@
 .btn_categorias {
 	height: 40px;
 	width: 150px;
-	color: white;
-	background-color: black;
 	background-color: #2e2e2e;
 	color: #ffff;
 	outline: none;
 	border: none;
 	box-shadow: none;
+	border-radius: 4px;
+	margin: 4px;
 }
 
 /* Estilos container 2 Parrafo + H3*/
@@ -165,4 +164,37 @@ resize: vertical;
 	border: none;
 	box-shadow: none;
 	width: 150px;
+}
+/* Estilos pagina about */
+.container-about {
+	margin: 0 auto;
+	width: 95%;
+	text-align: center;
+	align-self: center;
+	margin-top: 25px;
+}
+.galeria-about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+}
+.galeria-about img {
+	width: 95%;
+	object-fit: cover;
+	height: 397px;
+}
+.description-about {
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 25px;
+	align-self: center;
+	justify-content: center;
+}
+.span-agradecimiento{
+	border-bottom: 5px dotted greenyellow;
+	float: right;
+	font-size: 25px;
+	text-decoration: dotted;
+	margin-bottom: 10px;
 }
