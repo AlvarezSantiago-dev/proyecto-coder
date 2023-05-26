@@ -367,5 +367,8 @@ nav ul li a {
 .logotipo {
 	display: none;
 }
+.contenedor-muestra img {
+	height: 597px;
+}
 
 }
