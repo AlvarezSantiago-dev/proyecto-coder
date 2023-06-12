@@ -1,0 +1,16 @@
+/* Estilos pagina tienda */
+.productos-tienda {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+.productos-tienda img {
+	height: 397px;
+	width: 95%;
+	object-fit: cover;
+}
+.titulo-valor {
+	align-self: start;
+	padding-left: 2.5%;
+}

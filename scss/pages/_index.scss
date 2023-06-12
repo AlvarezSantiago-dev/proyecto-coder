@@ -1,0 +1,235 @@
+/*Version mobile first index*/
+/*Primer contariner*/
+.card_index {
+	display: flex;
+	justify-content: center;
+	position: relative;
+
+	&_texto {
+		margin-top: 25px;
+		width: 290px;
+		color: white;
+		position: absolute;
+		left: 25px;
+		align-self: center;
+	}
+
+	img {
+		object-fit: cover;
+		height: 397px;
+		width: 95%;
+	}
+
+	&_btn {
+		height: 40px;
+		width: 150px;
+		background-color: #2e2e2e;
+		color: #ffff;
+		outline: none;
+		border: none;
+		box-shadow: none;
+		border-radius: 4px;
+	}
+}
+
+
+
+
+/* Estilos categorias */
+.container-categorias {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+
+	&-desktop {
+		display: none;
+	}
+
+	& img {
+		object-fit: cover;
+		height: 397px;
+		width: 95%;
+	}
+
+}
+
+.btn_categorias {
+	height: 40px;
+	width: 150px;
+	background-color: #2e2e2e;
+	color: #ffff;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	border-radius: 4px;
+	margin: 4px;
+}
+
+/* Version Mobile tittle h2-*/
+.container-index-2 {
+	margin: 10px auto;
+	width: 95%;
+	text-align: center;
+	min-height: 65px;
+}
+
+/* Version Mobile tittle h3 */
+.tittle-trabajos-index {
+	margin: 0 auto;
+	width: 95%;
+	height: 65px;
+	margin-top: 15px;
+	text-align: center;
+	align-self: center;
+}
+
+/* Version mobile Imagenes de Trabajos Realizados*/
+.contenedor-muestra {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+
+	& img {
+		object-fit: cover;
+		height: 397px;
+		width: 95%;
+	}
+}
+
+/* Version desktop pagina inicio min-width:1023px*/
+@media (min-width:1023px) {
+
+	/*Primer contenedor index*/
+	.card_index {
+		display: flex;
+		justify-content: center;
+		position: relative;
+
+		&_texto {
+			margin-top: 25px;
+			width: 390px;
+			color: white;
+			position: absolute;
+			left: 25px;
+			align-self: center;
+		}
+
+		& img {
+			height: 597px;
+			width: 100%;
+		}
+	}
+
+	/* Version desktop Parrafo + h2 / Segundo contenedor*/
+	.container-index-2 {
+		margin: 0 auto;
+		width: 55%;
+		margin-top: 20px;
+		text-align: center;
+		align-self: center;
+	}
+
+	/* Estilos categorias */
+	/* Ocultar contenedor categorias version mobile con botones*/
+	.container-categorias {
+		display: none;
+	}
+
+	.btn_categorias {
+		display: none;
+	}
+
+	/*Mostrar contenedor desktop de la seccion categorias*/
+	.container-categorias-desktop {
+		margin: 5px;
+		gap: 10px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+
+	}
+
+	.cont-img {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		& img {
+			width: 95%;
+			height: 480px;
+			object-fit: cover;
+		}
+	}
+	
+	.btn_categorias-desktop {
+		height: 40px;
+		width: 150px;
+		background-color: #2e2e2e;
+		color: #ffff;
+		outline: none;
+		border: none;
+		border-radius: 4px;
+		margin: 4px auto;
+	}
+	/*CORREGIR INDEX CONTENEDOR DESKTOP*/
+}
+
+@media(min-width: 768px) {
+	/* Ocultar contenedor categorias version mobile con botones*/
+	.container-categorias {
+		display: none;
+	}
+	.container-categorias-desktop {
+		margin: 5px;
+		gap: 10px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+	
+	}
+	
+	.cont-img {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		& img {
+			width: 95%;
+			height: 320px;
+			object-fit: cover;
+		}
+	}
+	
+	.btn_categorias-desktop {
+		height: 40px;
+		width: 150px;
+		background-color: #2e2e2e;
+		color: #ffff;
+		outline: none;
+		border: none;
+		border-radius: 4px;
+		margin: 4px auto;
+	}
+}
+
+/*CORREGIR INDEX CONTENEDOR DESKTOP*/
+/*
+div {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+button {
+  width: 150px;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+*/
