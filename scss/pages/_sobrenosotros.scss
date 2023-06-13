@@ -27,6 +27,7 @@
 	margin-top: 25px;
 	align-self: center;
 	text-align: justify;
+    margin-bottom: 15px;
 }
 .span-agradecimiento{
 	border-bottom: 5px dotted greenyellow;
@@ -38,12 +39,12 @@
 
 @media (min-width:768px) {
     .galeria-about{
-    width: 100%;
-    
+    width: 80%;
+    margin: 0 auto; 
     display: grid;
     grid-template-columns:repeat(3,1fr);
     grid-template-rows: 1fr;
-    grid-gap: 1px;
+    grid-gap: 5px;
     
     & img {
         justify-self: center;
@@ -51,16 +52,21 @@
         min-width: 220px;
         }
     }
-    
+    .description-about{
+        margin: 50px auto;
+        width: 80%;
+    }
 }
 @media (min-width:1024px) {
     .galeria-about {
-        min-height: 480px;
+        width: 75%;
+        height: 420px;
     & img {
         height: 100%;
         justify-self: center;
-        min-width: 320px;
     }
     }
-
+    .description-about{
+        width: 65%;
+    }
 }

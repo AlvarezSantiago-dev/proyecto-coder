@@ -1,21 +1,29 @@
+/*Estilo botones*/
 .nav-desktop {
   display: none;
 }
 
+.container-fluid {
+  width: 100%;
+}
+
+.logotipo-desktop {
+  color: white;
+}
+
 /*Estilos nav Version desktop*/
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   /*Ocultar nav version mobile*/
   .navbar {
     display: none;
   }
   .nav-desktop {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 80px;
     padding: 15px;
     align-items: baseline;
-    background-color: rgb(69, 78, 156);
-    margin-bottom: 15px;
+    background-color: rgb(27, 69, 109);
   }
   .nav-desktop ul {
     color: white;
@@ -24,10 +32,26 @@
     gap: 15px;
   }
 }
-.logotipo-desktop {
-  color: white;
+@media (min-width: 1023px) {
+  /*Ocultar nav version mobile*/
+  .navbar {
+    display: none;
+  }
+  .nav-desktop {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    padding: 15px;
+    align-items: baseline;
+    background-color: rgb(27, 69, 109);
+  }
+  .nav-desktop ul {
+    color: white;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+  }
 }
-
 /*Version mobile first index*/
 /*Primer contariner*/
 .card_index {
@@ -36,7 +60,7 @@
   position: relative;
 }
 .card_index_texto {
-  margin-top: 25px;
+  margin-top: 75px;
   width: 290px;
   color: white;
   position: absolute;
@@ -46,7 +70,7 @@
 .card_index img {
   object-fit: cover;
   height: 397px;
-  width: 95%;
+  width: 100%;
 }
 .card_index_btn {
   height: 40px;
@@ -84,7 +108,7 @@
   border: none;
   box-shadow: none;
   border-radius: 4px;
-  margin: 4px;
+  margin: 5px;
 }
 
 /* Version Mobile tittle h2-*/
@@ -118,6 +142,94 @@
   width: 95%;
 }
 
+.btn-ver {
+  height: 40px;
+  width: 150px;
+  background-color: #2e2e2e;
+  color: white;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 4px;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .card_index {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .card_index_texto {
+    margin-top: 55px;
+    width: 390px;
+    color: white;
+    position: absolute;
+    left: 45px;
+    align-self: center;
+  }
+  .card_index img {
+    height: 597px;
+    width: 100%;
+  }
+  /* Ocultar contenedor categorias version mobile con botones*/
+  .container-categorias {
+    display: none;
+    /*Mostrar contenedor categorias version desktop*/
+  }
+  .container-categorias-desktop {
+    margin: 5px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    justify-self: center;
+    align-self: center;
+  }
+  /*Alineado de imagen con botones seccion categoria*/
+  .cont-img {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cont-img img {
+    width: 95%;
+    height: 320px;
+    object-fit: cover;
+  }
+  .btn-categorias-desktop {
+    height: 40px;
+    width: 150px;
+    background-color: #2e2e2e;
+    color: white;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 4px;
+    margin: 5px;
+    margin: 5px auto;
+  }
+  /*Modificacion h3 "Trabajos realizados..."*/
+  .tittle-trabajos-index {
+    margin-top: 50px;
+  }
+  /*Galeria de imagenes index*/
+  .contenedor-muestra {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contenedor-muestra img {
+    justify-self: center;
+    object-fit: cover;
+    height: 397px;
+    width: 95%;
+  }
+  .btn-ver {
+    margin: 20px auto;
+  }
+}
 /* Version desktop pagina inicio min-width:1023px*/
 @media (min-width: 1023px) {
   /*Primer contenedor index*/
@@ -131,11 +243,11 @@
     width: 390px;
     color: white;
     position: absolute;
-    left: 25px;
+    left: 95px;
     align-self: center;
   }
   .card_index img {
-    height: 597px;
+    height: 697px;
     width: 100%;
   }
   /* Version desktop Parrafo + h2 / Segundo contenedor*/
@@ -146,7 +258,6 @@
     text-align: center;
     align-self: center;
   }
-  /* Estilos categorias */
   /* Ocultar contenedor categorias version mobile con botones*/
   .container-categorias {
     display: none;
@@ -156,11 +267,54 @@
   }
   /*Mostrar contenedor desktop de la seccion categorias*/
   .container-categorias-desktop {
-    margin: 5px;
+    margin: 0 auto;
     gap: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+  }
+  .cont-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont-img img {
+    width: 95%;
+    height: 380px;
+    object-fit: cover;
+  }
+  .btn_categorias-desktop {
+    height: 40px;
+    width: 150px;
+    background-color: #2e2e2e;
+    color: white;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 4px;
+    margin: 5px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  /*Primer contenedor index*/
+  .card_index {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .card_index_texto {
+    margin-top: 25px;
+    width: 390px;
+    color: white;
+    position: absolute;
+    left: 125px;
+    align-self: center;
+  }
+  .card_index img {
+    height: 697px;
+    width: 100%;
   }
   .cont-img {
     display: flex;
@@ -173,97 +327,35 @@
     height: 480px;
     object-fit: cover;
   }
-  .btn_categorias-desktop {
-    height: 40px;
-    width: 150px;
-    background-color: #2e2e2e;
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    margin: 4px auto;
-  }
-  /*CORREGIR INDEX CONTENEDOR DESKTOP*/
 }
-@media (min-width: 768px) {
-  /* Ocultar contenedor categorias version mobile con botones*/
-  .container-categorias {
-    display: none;
-  }
-  .container-categorias-desktop {
-    margin: 5px;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-  }
-  .cont-img {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .cont-img img {
-    width: 95%;
-    height: 320px;
-    object-fit: cover;
-  }
-  .btn_categorias-desktop {
-    height: 40px;
-    width: 150px;
-    background-color: #2e2e2e;
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    margin: 4px auto;
-  }
-}
-/*CORREGIR INDEX CONTENEDOR DESKTOP*/
-/*
-div {
-  width: 300px;
-  height: 300px;
+/* Styles section contacto mobile first*/
+.container-contacto {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightgray;
-}
-
-button {
-  width: 150px;
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-*/
-/* Styles seccion contacto mobile first*/
-.form-container {
-  margin-top: 15px;
-  margin-left: 5%;
-  height: 96%;
-  max-height: 640px;
-}
-
-.container-contacto {
-  display: flex;
   flex-direction: column-reverse;
 }
-
 .container-contacto img {
   margin-top: 15px;
   align-self: center;
   object-fit: cover;
-  height: 397px;
+  height: 95%;
+  width: 95%;
+}
+.container-contacto .form-container {
+  margin-top: 55px;
+  margin-left: 5%;
+  height: 95%;
   width: 95%;
 }
 
+/*Estilos interior forumlario*/
 .form-container form {
   display: flex;
   flex-direction: column;
   width: 95%;
   gap: 10px;
+  height: 95%;
 }
 
 .relleno-form {
@@ -290,28 +382,58 @@ textarea {
 
 .btn-form {
   height: 40px;
+  width: 150px;
   background-color: #2e2e2e;
   color: white;
   outline: none;
   border: none;
   box-shadow: none;
-  width: 150px;
+  border-radius: 4px;
+  margin: 5px;
 }
 
-/* Version desktop pagina contacto min-width:1023px*/
-@media (min-width: 1023px) {
+/*Estructura desktop 768px Seccion contacto*/
+@media (min-width: 768px) {
   .form-container {
-    background-color: brown;
-    width: 50%;
-    margin-bottom: 15px;
+    height: 95%;
+    width: 70%;
   }
   .container-contacto {
-    background-color: aqua;
-    height: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    width: 70%;
   }
   .container-contacto img {
+    margin-top: 15px;
+    align-self: center;
+    object-fit: cover;
+    height: 96%;
+    width: 90%;
+  }
+}
+/* Version desktop pagina contacto min-width:1023px*/
+@media (min-width: 1023px) {
+  .container-contacto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 95%;
+    height: 700px;
+    margin: 0 auto;
+  }
+  .container-contacto img {
+    object-fit: cover;
+    width: 50%;
+    height: 80%;
+    min-width: 493px;
+    max-width: 550px;
+    height: 100%;
+  }
+  .container-contacto .form-container {
+    min-width: 493px;
+    max-width: 550px;
     width: 50%;
   }
 }
@@ -346,6 +468,7 @@ textarea {
   margin-top: 25px;
   align-self: center;
   text-align: justify;
+  margin-bottom: 15px;
 }
 
 .span-agradecimiento {
@@ -358,26 +481,34 @@ textarea {
 
 @media (min-width: 768px) {
   .galeria-about {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    grid-gap: 1px;
+    grid-gap: 5px;
   }
   .galeria-about img {
     justify-self: center;
     object-fit: cover;
     min-width: 220px;
   }
+  .description-about {
+    margin: 50px auto;
+    width: 80%;
+  }
 }
 @media (min-width: 1024px) {
   .galeria-about {
-    min-height: 480px;
+    width: 75%;
+    height: 420px;
   }
   .galeria-about img {
     height: 100%;
     justify-self: center;
-    min-width: 320px;
+  }
+  .description-about {
+    width: 65%;
   }
 }
 /* Estilos pagina tienda */
@@ -424,6 +555,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
+    margin: 0 auto;
   }
   .container-galeria img {
     justify-self: center;
@@ -439,6 +571,7 @@ textarea {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 5px;
+    margin: 0 auto;
   }
   .container-galeria img {
     justify-self: center;
@@ -454,6 +587,9 @@ textarea {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 5px;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 25px;
   }
   .container-galeria img {
     justify-self: center;

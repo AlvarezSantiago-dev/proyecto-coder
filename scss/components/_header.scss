@@ -1,21 +1,26 @@
+
 .nav-desktop {
 	display: none;
 }
-
+.container-fluid{
+	width: 100%;
+}
+.logotipo-desktop {
+	color: white;
+}
 /*Estilos nav Version desktop*/
-@media(min-width: 1024px){
+@media(min-width: 768px){
 /*Ocultar nav version mobile*/
 .navbar {
 	display: none;
 }
 	.nav-desktop {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		height: 80px;
 		padding: 15px;
 		align-items: baseline;
-		background-color: rgb(69, 78, 156);
-		margin-bottom: 15px;
+		background-color: rgb(27, 69, 109);
 		ul {
 			color: white;
 			list-style-type: none;
@@ -25,7 +30,24 @@
 		}
 	}
 }
-
-.logotipo-desktop {
-	color: white;
-}
+@media(min-width: 1023px){
+	/*Ocultar nav version mobile*/
+	.navbar {
+		display: none;
+	}
+		.nav-desktop {
+			display: flex;
+			justify-content: space-evenly;
+			height: 80px;
+			padding: 15px;
+			align-items: baseline;
+			background-color: rgb(27, 69, 109);
+			ul {
+				color: white;
+				list-style-type: none;
+				display: flex;
+				gap: 15px;
+				
+			}
+		}
+	}

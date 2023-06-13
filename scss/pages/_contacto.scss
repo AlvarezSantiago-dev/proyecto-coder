@@ -1,30 +1,31 @@
-/* Styles seccion contacto mobile first*/
-.form-container {
-	margin-top: 15px;
-	margin-left: 5%;
-	height: 96%;
-	max-height: 640px;
-}
+/* Styles section contacto mobile first*/
+
 .container-contacto {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column-reverse;
-	
-	
-	
+	& img{
+		margin-top: 15px;
+		align-self: center;
+		object-fit: cover;
+		height: 95%;
+		width: 95%;
+	}
+	.form-container {
+		margin-top: 55px;
+		margin-left: 5%;
+		height: 95%;
+		width: 95%;
+	}
 }
-.container-contacto img{
-	margin-top: 15px;
-	align-self: center;
-	object-fit: cover;
-	height: 397px;
-	width: 95%;
-}
+/*Estilos interior forumlario*/
 .form-container form {
 	display: flex;
 	flex-direction: column;
 	width: 95%;
 	gap: 10px;
-	
+	height: 95%;
 }
 .relleno-form {
 	width: 100%;
@@ -47,31 +48,58 @@ overflow: auto;
 resize: vertical;
 }
 .btn-form {
-	height: 40px;
-	background-color: #2e2e2e;
-	color: #ffff;
-	outline: none;
-	border: none;
-	box-shadow: none;
-	width: 150px;
+	@include btn;
+}
+/*Estructura desktop 768px Seccion contacto*/
+@media (min-width:768px) {
+	.form-container {
+	height: 95%;
+	width: 70%;
+}
+.container-contacto {
+	display: flex;
+	flex-direction: column-reverse;
+	margin: 0 auto;
+	width: 70%;
+	& img{
+		margin-top: 15px;
+		align-self: center;
+		object-fit: cover;
+		height: 96%;
+		width: 90%;
+	}
 }
 
+}
 
 /* Version desktop pagina contacto min-width:1023px*/
 @media (min-width:1023px) {
-	.form-container {
-		background-color: brown;
-		width: 50%;
-		margin-bottom: 15px;
-	}
+	
 	.container-contacto {
-		background-color: aqua;
-		height: 100%;
 		display: flex;
-		flex-direction: row-reverse;
-	}
-	.container-contacto img{
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		width: 95%;
+		height: 700px;
+		margin: 0 auto;
+	& img{
+		
+		object-fit: cover;
 		width: 50%;
+		height: 80%;
+		min-width: 493px;
+		max-width: 550px;
+		height: 100%;
+		
 	}
+	.form-container {
+		min-width: 493px;
+		max-width: 550px;
+		width: 50%;
+		
+		
+	}
+}
 }
 /*CORREGIR ESTRUCTURA CONTACTO */

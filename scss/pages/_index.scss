@@ -6,7 +6,7 @@
 	position: relative;
 
 	&_texto {
-		margin-top: 25px;
+		margin-top: 75px;
 		width: 290px;
 		color: white;
 		position: absolute;
@@ -17,7 +17,7 @@
 	img {
 		object-fit: cover;
 		height: 397px;
-		width: 95%;
+		width: 100%;
 	}
 
 	&_btn {
@@ -53,17 +53,8 @@
 	}
 
 }
-
 .btn_categorias {
-	height: 40px;
-	width: 150px;
-	background-color: #2e2e2e;
-	color: #ffff;
-	outline: none;
-	border: none;
-	box-shadow: none;
-	border-radius: 4px;
-	margin: 4px;
+	@include btn;
 }
 
 /* Version Mobile tittle h2-*/
@@ -97,6 +88,86 @@
 		width: 95%;
 	}
 }
+.btn-ver{
+	@include btn;
+	margin-bottom: 10px;
+}
+
+@media(min-width: 768px) {
+
+	.card_index {
+		display: flex;
+		justify-content: center;
+		position: relative;
+
+		&_texto {
+			margin-top: 55px;
+			width: 390px;
+			color: white;
+			position: absolute;
+			left: 45px;
+			align-self: center;
+		}
+
+		& img {
+			height: 597px;
+			width: 100%;
+		}
+	}
+	
+	/* Ocultar contenedor categorias version mobile con botones*/
+	.container-categorias {
+		display: none;
+/*Mostrar contenedor categorias version desktop*/
+		&-desktop {
+			margin: 5px;
+			gap: 10px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 1fr;
+			width: 90%;
+			margin: 0 auto;
+			justify-self: center;
+			align-self: center;
+		}
+	}
+/*Alineado de imagen con botones seccion categoria*/
+	.cont-img {
+		display: flex;
+		flex-wrap: wrap;
+		
+
+		& img {
+			width: 95%;
+			height: 320px;
+			object-fit: cover;
+		}
+	}
+	.btn-categorias-desktop {
+		@include btn;
+		margin: 5px auto;
+	}
+/*Modificacion h3 "Trabajos realizados..."*/
+	.tittle-trabajos-index {
+		margin-top:50px;
+	}
+
+/*Galeria de imagenes index*/
+.contenedor-muestra {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+
+	& img {
+		justify-self: center;
+		object-fit: cover;
+		height: 397px;
+		width: 95%;
+	}
+}
+.btn-ver {
+	margin: 20px auto;
+}
+}
 
 /* Version desktop pagina inicio min-width:1023px*/
 @media (min-width:1023px) {
@@ -112,12 +183,12 @@
 			width: 390px;
 			color: white;
 			position: absolute;
-			left: 25px;
+			left: 95px;
 			align-self: center;
 		}
 
 		& img {
-			height: 597px;
+			height: 697px;
 			width: 100%;
 		}
 	}
@@ -131,7 +202,6 @@
 		align-self: center;
 	}
 
-	/* Estilos categorias */
 	/* Ocultar contenedor categorias version mobile con botones*/
 	.container-categorias {
 		display: none;
@@ -143,7 +213,7 @@
 
 	/*Mostrar contenedor desktop de la seccion categorias*/
 	.container-categorias-desktop {
-		margin: 5px;
+		margin: 0 auto;
 		gap: 10px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -156,80 +226,52 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+
+		& img {
+			width: 95%;
+			height: 380px;
+			object-fit: cover;
+		}
+	}
+	.btn_categorias-desktop {
+		@include btn;
+		margin: 0 auto;
+	}
+
+}
+
+@media (min-width:1200px) {
+
+	/*Primer contenedor index*/
+	.card_index {
+		display: flex;
+		justify-content: center;
+		position: relative;
+
+		&_texto {
+			margin-top: 25px;
+			width: 390px;
+			color: white;
+			position: absolute;
+			left: 125px;
+			align-self: center;
+		}
+
+		& img {
+			height: 697px;
+			width: 100%;
+		}
+	}
+	.cont-img {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
 		& img {
 			width: 95%;
 			height: 480px;
 			object-fit: cover;
 		}
 	}
-	
-	.btn_categorias-desktop {
-		height: 40px;
-		width: 150px;
-		background-color: #2e2e2e;
-		color: #ffff;
-		outline: none;
-		border: none;
-		border-radius: 4px;
-		margin: 4px auto;
-	}
-	/*CORREGIR INDEX CONTENEDOR DESKTOP*/
 }
-
-@media(min-width: 768px) {
-	/* Ocultar contenedor categorias version mobile con botones*/
-	.container-categorias {
-		display: none;
-	}
-	.container-categorias-desktop {
-		margin: 5px;
-		gap: 10px;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 1fr;
-	
-	}
-	
-	.cont-img {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		& img {
-			width: 95%;
-			height: 320px;
-			object-fit: cover;
-		}
-	}
-	
-	.btn_categorias-desktop {
-		height: 40px;
-		width: 150px;
-		background-color: #2e2e2e;
-		color: #ffff;
-		outline: none;
-		border: none;
-		border-radius: 4px;
-		margin: 4px auto;
-	}
-}
-
-/*CORREGIR INDEX CONTENEDOR DESKTOP*/
-/*
-div {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightgray;
-}
-
-button {
-  width: 150px;
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-*/
