@@ -17,6 +17,10 @@
 		margin-left: 5%;
 		height: 95%;
 		width: 95%;
+	& h1 {
+		font-size: 1.8rem;
+		color: $color-principal;
+	}
 	}
 }
 /*Estilos interior forumlario*/

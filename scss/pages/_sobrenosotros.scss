@@ -7,6 +7,10 @@
 	width: 95%;
 	text-align: center;
 	margin-top: 55px;
+    & h1{
+        color: $color-principal;
+        font-size: 1.8rem;
+    }
 }
 .galeria-about {
 	display: flex;
@@ -28,6 +32,8 @@
 	align-self: center;
 	text-align: justify;
     margin-bottom: 15px;
+    background-color: #f1f1f1;
+    padding: 25px;
 }
 .span-agradecimiento{
 	border-bottom: 5px dotted greenyellow;

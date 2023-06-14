@@ -1,4 +1,14 @@
+/*Mixing*/
+/*Flex center*/
+/*Toda mi estructura ya la habia formado anteriormente, por ende no le di uso al mixing.*/
 /*Estilo botones*/
+/*Variables*/
+/*Intente utilizar esta variable pero no me funciono*/
+html {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
 .nav-desktop {
   display: none;
 }
@@ -54,12 +64,18 @@
 }
 /*Version mobile first index*/
 /*Primer contariner*/
+main {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
 .card_index {
   display: flex;
   justify-content: center;
   position: relative;
 }
 .card_index_texto {
+  text-shadow: 3px 3px 5px rgb(27, 69, 109);
   margin-top: 75px;
   width: 290px;
   color: white;
@@ -81,6 +97,12 @@
   border: none;
   box-shadow: none;
   border-radius: 4px;
+  margin: 5px;
+  box-shadow: 2px 2px 5px rgb(27, 69, 109);
+}
+.card_index a {
+  text-decoration: none;
+  color: white;
 }
 
 /* Estilos categorias */
@@ -109,6 +131,7 @@
   box-shadow: none;
   border-radius: 4px;
   margin: 5px;
+  box-shadow: 2px 2px 5px rgb(27, 69, 109);
 }
 
 /* Version Mobile tittle h2-*/
@@ -118,15 +141,20 @@
   text-align: center;
   min-height: 65px;
 }
+.container-index-2 h2 {
+  font-size: 1.8rem;
+  color: rgb(27, 69, 109);
+}
 
 /* Version Mobile tittle h3 */
 .tittle-trabajos-index {
-  margin: 0 auto;
+  font-size: 1.8rem;
+  color: rgb(27, 69, 109);
   width: 95%;
-  height: 65px;
   margin-top: 15px;
   text-align: center;
   align-self: center;
+  margin-left: 25px;
 }
 
 /* Version mobile Imagenes de Trabajos Realizados*/
@@ -134,12 +162,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
+  width: 95%;
+  margin: 0 auto;
 }
 .contenedor-muestra img {
   object-fit: cover;
   height: 397px;
-  width: 95%;
+  width: 80%;
+}
+
+.flex-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-ver {
@@ -152,7 +188,12 @@
   box-shadow: none;
   border-radius: 4px;
   margin: 5px;
-  margin-bottom: 10px;
+  margin: 15px auto;
+  box-shadow: 2px 2px 5px rgb(27, 69, 109);
+}
+.btn-ver a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -168,6 +209,9 @@
     position: absolute;
     left: 45px;
     align-self: center;
+  }
+  .card_index_texto h1 {
+    font-size: 1.6rem;
   }
   .card_index img {
     height: 597px;
@@ -198,6 +242,7 @@
     width: 95%;
     height: 320px;
     object-fit: cover;
+    box-shadow: 1px 1px 5px black;
   }
   .btn-categorias-desktop {
     height: 40px;
@@ -210,6 +255,9 @@
     border-radius: 4px;
     margin: 5px;
     margin: 5px auto;
+    box-shadow: 2px 2px 5px rgb(27, 69, 109);
+    width: 110px;
+    height: 25px;
   }
   /*Modificacion h3 "Trabajos realizados..."*/
   .tittle-trabajos-index {
@@ -219,15 +267,14 @@
   .contenedor-muestra {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 auto;
+    width: 90%;
   }
   .contenedor-muestra img {
+    background-position: center;
     justify-self: center;
-    object-fit: cover;
-    height: 397px;
-    width: 95%;
-  }
-  .btn-ver {
-    margin: 20px auto;
+    box-shadow: 1px 1px 5px black;
   }
 }
 /* Version desktop pagina inicio min-width:1023px*/
@@ -250,53 +297,19 @@
     height: 697px;
     width: 100%;
   }
-  /* Version desktop Parrafo + h2 / Segundo contenedor*/
-  .container-index-2 {
-    margin: 0 auto;
-    width: 55%;
-    margin-top: 20px;
-    text-align: center;
-    align-self: center;
-  }
-  /* Ocultar contenedor categorias version mobile con botones*/
-  .container-categorias {
-    display: none;
-  }
-  .btn_categorias {
-    display: none;
-  }
-  /*Mostrar contenedor desktop de la seccion categorias*/
-  .container-categorias-desktop {
-    margin: 0 auto;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-  }
-  .cont-img {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .cont-img img {
-    width: 95%;
-    height: 380px;
-    object-fit: cover;
-  }
-  .btn_categorias-desktop {
-    height: 40px;
-    width: 150px;
-    background-color: #2e2e2e;
-    color: white;
-    outline: none;
-    border: none;
-    box-shadow: none;
-    border-radius: 4px;
-    margin: 5px;
-    margin: 0 auto;
-  }
 }
+.cont-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.cont-img img {
+  width: 95%;
+  height: 380px;
+  object-fit: cover;
+}
+
 @media (min-width: 1200px) {
   /*Primer contenedor index*/
   .card_index {
@@ -315,17 +328,6 @@
   .card_index img {
     height: 697px;
     width: 100%;
-  }
-  .cont-img {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .cont-img img {
-    width: 95%;
-    height: 480px;
-    object-fit: cover;
   }
 }
 /* Styles section contacto mobile first*/
@@ -347,6 +349,10 @@
   margin-left: 5%;
   height: 95%;
   width: 95%;
+}
+.container-contacto .form-container h1 {
+  font-size: 1.8rem;
+  color: rgb(27, 69, 109);
 }
 
 /*Estilos interior forumlario*/
@@ -449,6 +455,10 @@ textarea {
   text-align: center;
   margin-top: 55px;
 }
+.container-about h1 {
+  color: rgb(27, 69, 109);
+  font-size: 1.8rem;
+}
 
 .galeria-about {
   display: flex;
@@ -469,6 +479,8 @@ textarea {
   align-self: center;
   text-align: justify;
   margin-bottom: 15px;
+  background-color: #f1f1f1;
+  padding: 25px;
 }
 
 .span-agradecimiento {
@@ -512,24 +524,105 @@ textarea {
   }
 }
 /* Estilos pagina tienda */
-.productos-tienda {
+.tittle-tienda {
+  margin-top: 75px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.tittle-tienda h1 {
+  color: rgb(27, 69, 109);
+  font-size: 1.8rem;
+}
+
+.galeria-tienda {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  gap: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.cont-producto {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  justify-content: center;
+  width: 300px;
+  height: 350px;
 }
-
-.productos-tienda img {
-  height: 397px;
-  width: 95%;
+.cont-producto img {
+  width: 100%;
+  height: 240px;
   object-fit: cover;
+  box-shadow: 1px 1px 5px black;
 }
-
-.titulo-valor {
+.cont-producto p {
+  text-shadow: 3px 3px 6px rgb(27, 69, 109);
   align-self: start;
-  padding-left: 2.5%;
+  padding-left: 5%;
+}
+.cont-producto h1 {
+  align-self: start;
+  padding-left: 5%;
+  font-size: 1.2rem;
 }
 
+@media (min-width: 768px) {
+  .galeria-tienda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 95%;
+    justify-items: center;
+  }
+  .cont-producto {
+    display: flex;
+    justify-content: center;
+  }
+  .cont-producto img {
+    object-fit: cover;
+  }
+  .cont-producto p {
+    align-self: start;
+    padding-left: 5%;
+  }
+  .cont-producto h1 {
+    align-self: start;
+    padding-left: 5%;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1023px) {
+  .galeria-tienda {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+  }
+  .cont-producto {
+    display: flex;
+    justify-content: center;
+  }
+  .cont-producto img {
+    object-fit: cover;
+  }
+  .cont-producto p {
+    align-self: start;
+    padding-left: 5%;
+  }
+  .cont-producto h1 {
+    align-self: start;
+    padding-left: 5%;
+    font-size: 1.2rem;
+  }
+}
 /* Estilos pagina trabajos*/
 .container-galeria {
   display: flex;
@@ -542,6 +635,7 @@ textarea {
   height: 397px;
   width: 95%;
   object-fit: cover;
+  box-shadow: 1px 1px 5px black;
 }
 
 .container-trabajos {
@@ -549,19 +643,23 @@ textarea {
   text-align: center;
   margin-top: 65px;
 }
+.container-trabajos h1 {
+  font-size: 1.8rem;
+  color: rgb(27, 69, 109);
+}
 
 @media (min-width: 768px) {
   .container-galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    margin: 0 auto;
+    margin: 5px auto;
   }
   .container-galeria img {
     justify-self: center;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
   .container-trabajos {
     margin-top: 55px;
     margin-bottom: 55px;
@@ -571,7 +669,7 @@ textarea {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 5px;
-    margin: 0 auto;
+    margin: 15px auto;
   }
   .container-galeria img {
     justify-self: center;

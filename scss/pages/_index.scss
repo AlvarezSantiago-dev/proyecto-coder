@@ -1,17 +1,23 @@
 /*Version mobile first index*/
 /*Primer contariner*/
+main {
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
 .card_index {
 	display: flex;
 	justify-content: center;
 	position: relative;
 
 	&_texto {
+		text-shadow: 3px 3px 5px $color-principal;
 		margin-top: 75px;
 		width: 290px;
 		color: white;
 		position: absolute;
 		left: 25px;
 		align-self: center;
+	
 	}
 
 	img {
@@ -21,20 +27,15 @@
 	}
 
 	&_btn {
-		height: 40px;
-		width: 150px;
-		background-color: #2e2e2e;
-		color: #ffff;
-		outline: none;
-		border: none;
-		box-shadow: none;
-		border-radius: 4px;
+	@include btn;
+	box-shadow: 2px 2px 5px $color-principal;
+	
+	}
+	& a{
+		text-decoration: none;
+		color: white;
 	}
 }
-
-
-
-
 /* Estilos categorias */
 .container-categorias {
 	display: flex;
@@ -55,6 +56,7 @@
 }
 .btn_categorias {
 	@include btn;
+	box-shadow: 2px 2px 5px $color-principal;
 }
 
 /* Version Mobile tittle h2-*/
@@ -63,16 +65,21 @@
 	width: 95%;
 	text-align: center;
 	min-height: 65px;
+	& h2 {
+		font-size: 1.8rem;
+		color: $color-principal;
+	}
 }
 
 /* Version Mobile tittle h3 */
 .tittle-trabajos-index {
-	margin: 0 auto;
+	font-size: 1.8rem;
+	color: $color-principal;
 	width: 95%;
-	height: 65px;
 	margin-top: 15px;
 	text-align: center;
 	align-self: center;
+	margin-left: 25px;
 }
 
 /* Version mobile Imagenes de Trabajos Realizados*/
@@ -80,19 +87,31 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 25px;
+	gap: 10px;
+	width: 95%;
+	margin: 0 auto;
 
 	& img {
 		object-fit: cover;
 		height: 397px;
-		width: 95%;
+		width: 80%;
+
 	}
 }
-.btn-ver{
-	@include btn;
-	margin-bottom: 10px;
+.flex-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
+.btn-ver {
+	@include btn;
+	margin: 15px auto;
+	box-shadow: 2px 2px 5px $color-principal;
+& a{
+	text-decoration: none;
+	color: white;
+}
+}
 @media(min-width: 768px) {
 
 	.card_index {
@@ -107,6 +126,9 @@
 			position: absolute;
 			left: 45px;
 			align-self: center;
+			& h1{
+				font-size: 1.6rem;
+			}
 		}
 
 		& img {
@@ -114,8 +136,7 @@
 			width: 100%;
 		}
 	}
-	
-	/* Ocultar contenedor categorias version mobile con botones*/
+/* Ocultar contenedor categorias version mobile con botones*/
 	.container-categorias {
 		display: none;
 /*Mostrar contenedor categorias version desktop*/
@@ -141,11 +162,15 @@
 			width: 95%;
 			height: 320px;
 			object-fit: cover;
+			box-shadow: 1px 1px 5px black;
 		}
 	}
 	.btn-categorias-desktop {
 		@include btn;
 		margin: 5px auto;
+		box-shadow: 2px 2px 5px $color-principal;
+		width: 110px;
+		height: 25px;
 	}
 /*Modificacion h3 "Trabajos realizados..."*/
 	.tittle-trabajos-index {
@@ -154,19 +179,19 @@
 
 /*Galeria de imagenes index*/
 .contenedor-muestra {
-	display: grid;
-	grid-template-columns: repeat(2,1fr);
-
-	& img {
-		justify-self: center;
-		object-fit: cover;
-		height: 397px;
-		width: 95%;
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr);
+        margin: 0 auto;
+		width: 90%;
+		
+    & img {
+		background-position: center;
+        justify-self: center;
+		box-shadow: 1px 1px 5px black;
+    }
+	
 	}
-}
-.btn-ver {
-	margin: 20px auto;
-}
 }
 
 /* Version desktop pagina inicio min-width:1023px*/
@@ -192,35 +217,7 @@
 			width: 100%;
 		}
 	}
-
-	/* Version desktop Parrafo + h2 / Segundo contenedor*/
-	.container-index-2 {
-		margin: 0 auto;
-		width: 55%;
-		margin-top: 20px;
-		text-align: center;
-		align-self: center;
-	}
-
-	/* Ocultar contenedor categorias version mobile con botones*/
-	.container-categorias {
-		display: none;
-	}
-
-	.btn_categorias {
-		display: none;
-	}
-
-	/*Mostrar contenedor desktop de la seccion categorias*/
-	.container-categorias-desktop {
-		margin: 0 auto;
-		gap: 10px;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 1fr;
-
-	}
-
+}
 	.cont-img {
 		display: flex;
 		flex-wrap: wrap;
@@ -233,12 +230,6 @@
 			object-fit: cover;
 		}
 	}
-	.btn_categorias-desktop {
-		@include btn;
-		margin: 0 auto;
-	}
-
-}
 
 @media (min-width:1200px) {
 
@@ -260,18 +251,6 @@
 		& img {
 			height: 697px;
 			width: 100%;
-		}
-	}
-	.cont-img {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-
-		& img {
-			width: 95%;
-			height: 480px;
-			object-fit: cover;
 		}
 	}
 }

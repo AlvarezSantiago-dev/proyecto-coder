@@ -1,3 +1,12 @@
+/*Mixing*/
+/*Flex center*/ 
+/*Toda mi estructura ya la habia formado anteriormente, por ende no le di uso al mixing.*/
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*Estilo botones*/
 @mixin btn {
     height: 40px;
@@ -10,4 +19,5 @@
     border-radius: 4px;
     margin: 5px;
 }
-$color: rgb(27, 69, 109);
+/*Variables*/
+$color-principal: rgb(27, 69, 109); /*Intente utilizar esta variable pero no me funciono*/
