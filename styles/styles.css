@@ -88,6 +88,12 @@ main {
   left: 25px;
   align-self: center;
 }
+.card_index_texto h1 {
+  font-size: 1.2rem;
+}
+.card_index_texto p {
+  font-size: 0.75rem;
+}
 .card_index img {
   object-fit: cover;
   height: 397px;
@@ -145,6 +151,9 @@ main {
   width: 95%;
   text-align: center;
   min-height: 65px;
+}
+.container-index-2 p {
+  font-size: 0.9rem;
 }
 .container-index-2 h2 {
   font-size: 1.8rem;
@@ -215,8 +224,11 @@ main {
     left: 45px;
     align-self: center;
   }
+  .card_index_texto p {
+    font-size: 1rem;
+  }
   .card_index_texto h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .card_index img {
     height: 597px;
