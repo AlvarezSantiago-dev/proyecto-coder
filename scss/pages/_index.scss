@@ -141,12 +141,11 @@ main {
 		display: none;
 /*Mostrar contenedor categorias version desktop*/
 		&-desktop {
-			margin: 5px;
 			gap: 10px;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: 1fr;
-			width: 90%;
+			width: 80%;
 			margin: 0 auto;
 			justify-self: center;
 			align-self: center;
@@ -217,12 +216,15 @@ main {
 			width: 100%;
 		}
 	}
-}
+}	
+.co
 	.cont-img {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
+		margin: 0 auto;
 
 		& img {
 			width: 95%;

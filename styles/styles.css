@@ -4,6 +4,11 @@
 /*Estilo botones*/
 /*Variables*/
 /*Intente utilizar esta variable pero no me funciono*/
+main {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
 html {
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
@@ -223,12 +228,11 @@ main {
     /*Mostrar contenedor categorias version desktop*/
   }
   .container-categorias-desktop {
-    margin: 5px;
     gap: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     justify-self: center;
     align-self: center;
@@ -298,13 +302,15 @@ main {
     width: 100%;
   }
 }
-.cont-img {
+.co .cont-img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
-.cont-img img {
+.co .cont-img img {
   width: 95%;
   height: 380px;
   object-fit: cover;
@@ -473,14 +479,16 @@ textarea {
 }
 
 .description-about {
-  width: 95%;
+  width: 75%;
   margin: 0 auto;
   margin-top: 25px;
   align-self: center;
   text-align: justify;
   margin-bottom: 15px;
-  background-color: #f1f1f1;
   padding: 25px;
+}
+.description-about p {
+  font-size: 0.9rem;
 }
 
 .span-agradecimiento {
