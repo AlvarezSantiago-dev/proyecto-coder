@@ -104,6 +104,7 @@ main {
 		object-fit: cover;
 		height: 397px;
 		width: 80%;
+		
 
 	}
 }
@@ -146,6 +147,7 @@ main {
 		& img {
 			height: 597px;
 			width: 100%;
+			
 		}
 	}
 /* Ocultar contenedor categorias version mobile con botones*/
@@ -174,6 +176,9 @@ main {
 			height: 320px;
 			object-fit: cover;
 			box-shadow: 1px 1px 5px black;
+			&:hover{
+				filter: contrast(24%);
+			}
 		}
 	}
 	.btn-categorias-desktop {
@@ -200,6 +205,9 @@ main {
 		background-position: center;
         justify-self: center;
 		box-shadow: 1px 1px 5px black;
+		&:hover{
+			filter: contrast(24%);
+		}
     }
 	
 	}

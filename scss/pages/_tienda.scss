@@ -35,17 +35,26 @@
 		height: 240px;
 		object-fit: cover;
 		box-shadow: 1px 1px 5px black;
+		&:hover{
+			filter: contrast(24%);
+		}
 
 	}
-	& p {
-		text-shadow: 3px 3px 6px $color-principal;
-		align-self: start;
-		padding-left: 5%;
-	}
 	& h1{
+		padding-top: 5px;
 		align-self: start;
-		padding-left: 5%;
 		font-size: 1.2rem;
+	}
+}
+.div-precio-comprar {
+	display: flex;
+	justify-content: space-between;
+}
+.comprar a{
+	text-decoration: none;
+	color: $color-principal;
+	&:hover {
+		color: green;
 	}
 }
 @media (min-width:768px) {
@@ -63,13 +72,8 @@
 		& img {
 			object-fit: cover;
 		}
-		& p {
-			align-self: start;
-			padding-left: 5%;
-		}
 		& h1{
 			align-self: start;
-			padding-left: 5%;
 			font-size: 1.2rem;
 		}
 	}
@@ -88,13 +92,8 @@
 			& img {
 				object-fit: cover;
 			}
-			& p {
-				align-self: start;
-				padding-left: 5%;
-			}
 			& h1{
 				align-self: start;
-				padding-left: 5%;
 				font-size: 1.2rem;
 			}
 		}
